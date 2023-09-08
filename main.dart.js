@@ -43726,10 +43726,10 @@ throw A.d(A.bA("climateType is null"))},
 mD(){var s,r,q,p=this
 if(p.a==null){s=p.db
 B.b.a2(s)
-s.push("heatPump is null")
+s.push("Please select a heat pump")
 return}if(p.b==null){s=p.db
 B.b.a2(s)
-s.push("boiler is null")
+s.push("Please select a boiler")
 return}p.ach()
 p.aci()
 p.ajM()
@@ -43817,9 +43817,9 @@ o=o.b
 n=o.z
 n.toString
 b.push(new A.cV("",m,l,c,f,c,e,c,c,c,A.jR(m,A.dh(A.an([k.b,g,o.b,n],s,s),q,q),"heatPumpCOPbin line 321 "+m)))}}},
-ajM(){var s,r,q,p,o,n,m,l,k,j=this,i=j.db
-B.b.a2(i)
-for(s=j.cy,r=s.length,q=0;q<s.length;s.length===r||(0,A.E)(s),++q){p=s[q]
+ajM(){var s,r,q,p,o,n,m,l,k,j,i=this,h=i.db
+B.b.a2(h)
+for(s=i.cy,r=s.length,q=0;q<s.length;s.length===r||(0,A.E)(s),++q){p=s[q]
 o=p.r
 o.toString
 n=p.e
@@ -43827,16 +43827,17 @@ n.toString
 if(o>n){p.r=n
 o=n}if(o>n){p.r=n
 o=n}m=p.b
-if(m<j.e&&o>0){p.r=0
-o=0}o=n-(m<j.a.f&&o>0?p.r=0:o)
+if(m<i.e&&o>0){p.r=0
+o=0}o=n-(m<i.a.f&&o>0?p.r=0:o)
 l=p.Q
 if(o!==l){p.Q=o
-l=o}if(m>j.f&&l>0){p.Q=0
+l=o}if(m>i.f&&l>0){p.Q=0
 l=0}if(l<0){p.Q=0
 l=0}if(l>n){p.Q=n
-l=n}k=j.b.c
+l=n}k=i.b.c
 if(l>k){p.Q=k
-l=k}if(Math.abs((o-l)/n*100)>0.5)i.push("Error in PartLoadPoint "+p.a+" at "+m+"\xb0C: heatPumpHeatingCapacity + boilerHeatingCapacity != heatDemandPh")}},
+l=k}j=(o-l)/n*100
+if(Math.abs(j)>0.5)h.push("Error at "+m+"\xb0C outside temperature: the delivered power of the heat pump and boiler is "+B.c.a4(j,2)+"% different from the heat demand of the building")}},
 aeM(){var s,r,q,p,o,n,m,l,k,j,i,h
 for(s=this.cy,r=s.length,q=0;q<r;++q){p=s[q]
 o=p.e
